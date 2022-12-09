@@ -2,6 +2,16 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
+<%
+if(session.getAttribute("kayttaja")==null){		
+	response.sendRedirect("index.jsp");	
+	return;
+}
+response.setHeader("Cache-Control", "no-cache");
+response.setHeader("Cache-Control", "no-store");
+response.setHeader("Pragma", "no-cache");
+response.setDateHeader("Expires", 0);
+%>
 <head>
 <meta charset="UTF-8">
 <script src="scripts/main.js"></script>
